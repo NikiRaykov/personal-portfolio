@@ -8,14 +8,18 @@
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
+    <div id="language-selector">
+        <button class="btn-container-change-language" onclick="changeLanguage('en')">English</button>
+        <button class="btn-container-change-language" onclick="changeLanguage('de')">German</button>
+ </div>
     <nav id="desktop-nav">
         <div class="logo">Niki Raykov</div>
         <div>
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about" data-en="About" data-de="Über mich">About</a></li>
+                <li><a href="#experience" data-en="Experience" data-de="Erfahrung">Experience</a></li>
+                <li><a href="#projects" data-en="Projects" data-de="Projekte">Projects</a></li>
+                <li><a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -28,10 +32,10 @@
             <span></span>
         </div>
         <div class="menu-links">
-            <li><a href="#about" onclick="toggleMenu()">About</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            <li><a href="#about" onclick="toggleMenu()" data-en="About" data-de="Über mich">About</a></li>
+            <li><a href="#experience" onclick="toggleMenu()" data-en="Experience" data-de="Erfahrung">Experience</a></li>
+            <li><a href="#projects" onclick="toggleMenu()" data-en="Projects" data-de="Projekte">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()" data-en="Contact" data-de="Kontakt">Contact</a></li>
         </div>
         </div>
     </nav>
@@ -40,14 +44,18 @@
             <img src="./assets/profile-picture-edited.png" alt="Niki Raykov profile picture">
         </div>
         <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
+            <p class="section__text__p1" data-en="Hello, I'm" data-de="Hallo, ich bin">Hello, I'm</p>
             <h1 class="title">Niki Raykov</h1>
             <p class="section__text__p2">Web Developer</p>
             <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/niki-raykov-resume.pdf')">
+                <button class="btn btn-color-2" 
+                onclick="window.open('./assets/niki-raykov-resume.pdf')"
+                data-en="Download CV" data-de="CV herunterladen">
                 Download CV
             </button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                <button class="btn btn-color-1" 
+                onclick="location.href='./#contact'"
+                data-en="Contact me" data-de="Kontaktieren Sie mich">
                     Contact me</button>
             </div>
             <div id="socials-container">
@@ -59,8 +67,8 @@
         </div>
     </section>
     <section id="about">
-        <p class="section__text__p1">Get to know more about me</p>
-        <h1 class="title">About me</h1>
+        <p class="section__text__p1" data-en="Get to know more about me" data-de="Lerner Sie mich besser kennen">Get to know more about me</p>
+        <h1 class="title" data-en="About me" data-de="Über mich">About me</h1>
         <div class="section-container">
             <div class="section__pic-container">
                 <img 
@@ -75,8 +83,9 @@
                         src="./assets/experience.png" 
                         alt="Experience icon"
                         class="icon"/>
-                        <h3>Experience</h3>
-                        <p>2+ years of experience in various university,<br>
+                        <h3 data-en="Experience" data-de="Erfahrung">Experience</h3>
+                        <p data-en="2+ years of experience in various university, and personal projects" 
+                        data-de="2+ Jahre Erfahrung in verschiedenen universitären und persönlichen Projekten">2+ years of experience in various university,<br>
                             and personal projects</p>
                     </div>
                     <div class="details-container">
@@ -84,12 +93,17 @@
                         src="./assets/education.png" 
                         alt="Education icon"
                         class="icon"/>
-                        <h3>Education</h3>
+                        <h3 data-en="Education" data-de="Bildung">Education</h3>
                         <p>Software University Sofia<br>Java Web Developer</p>
                     </div>
                 </div>
                 <div class="text-container">
-                    <p>Enthusiastic and self-motivated final year Software Engineer student, eager to kick start his career in the
+                    <p data-en="Enthusiastic and self-motivated final year Software Engineer student, eager to kick start his career in the
+                    Software industry. Demonstrates commitment, strong research skills, problem solving
+                    and proactive attitude whilst meeting tight deadlines either in a team or individually. Currently enhancing
+                    skills while volunteering as an Assistant Software Engineering Lecturer." 
+                    data-de="Begeisterter und selbstmotivierter Software Engineer Student im letzten Jahr, der seine Karriere in der Software-Branche unbedingt durchstarten möchte. Zeigt Engagement, starke Forschungsfähigkeiten, Problemlösungsfähigkeiten und eine proaktive Einstellung und hält gleichzeitig enge Fristen ein, entweder 
+                    im Team oder einzeln. Derzeit verbessere ich meine Fähigkeiten während meiner ehrenamtlichen Tätigkeit als Assistant Software Engineering Dozent.">Enthusiastic and self-motivated final year Software Engineer student, eager to kick start his career in the
                         Software industry. Demonstrates commitment, strong research skills, problem solving
                         and proactive attitude whilst meeting tight deadlines either in a team or individually. Currently enhancing
                         skills while volunteering as an Assistant Software Engineering Lecturer.</p>
@@ -100,8 +114,8 @@
         onclick="location.href='./#experience'"/>
     </section>
     <section id="experience">
-        <p class="section__text__p1">Explore My</p>
-        <h1 class="title">Experience</h1>
+        <p class="section__text__p1" data-en="Explore my" data-de="Entdecken Sie meine">Explore My</p>
+        <h1 class="title" data-en="Experience" data-de="Erfahrung">Experience</h1>
         <div class="experience-details-container">
             <div class="about-containers">
                 <div class="details-containers">
@@ -114,7 +128,7 @@
                             class="icon"/>
                             <div>
                                 <h3>Java</h3>
-                                <p>Experienced</p>
+                                <p data-en="Experienced" data-de="Erfahren">Experienced</p>
                             </div>
                         </article>
                         <article>
@@ -124,7 +138,7 @@
                             class="icon"/>
                             <div>
                                 <h3>OOP</h3>
-                                <p>Experienced</p>
+                                <p data-en="Experienced" data-de="Erfahren">Experienced</p>
                             </div>
                         </article>
                         <article><img 
@@ -133,7 +147,7 @@
                             class="icon"/>
                             <div>
                                 <h3>Data Structures</h3>
-                                <p>Experienced</p>
+                                <p data-en="Experienced" data-de="Erfahren">Experienced</p>
                             </div>
                         </article>
                         <article>
@@ -143,7 +157,7 @@
                             class="icon"/>
                             <div>
                                 <h3>Spring</h3>
-                                <p>Advanced</p>
+                                <p data-en="Advanced" data-de="Fortschrittlich">Advanced</p>
                             </div>
                         </article>
                         <article>
@@ -153,7 +167,7 @@
                             class="icon"/>
                             <div>
                                 <h3>MySQL</h3>
-                                <p>Advanced</p>
+                                <p data-en="Advanced" data-de="Fortschrittlich">Advanced</p>
                             </div>
                         </article>
                         <article>
@@ -163,7 +177,7 @@
                             class="icon"/>
                             <div>
                                 <h3>AOP</h3>
-                                <p>Beginner</p>
+                                <p data-en="Beginner" data-de="Anfänger">Beginner</p>
                             </div>
                         </article>
                     </div>
@@ -178,7 +192,7 @@
                             class="icon"/>
                             <div>
                                 <h3>JavaScript</h3>
-                                <p>Basic</p>
+                                <p data-en="Basic" data-de="Basic">Basic</p>
                             </div>
                         </article>
                         <article>
@@ -188,7 +202,7 @@
                             class="icon"/>
                             <div>
                                 <h3>Git</h3>
-                                <p>Experienced</p>
+                                <p data-en="Experienced" data-de="Erfahren">Experienced</p>
                             </div>
                         </article>
                         <article>
@@ -198,7 +212,7 @@
                             class="icon"/>
                             <div>
                                 <h3>HTML</h3>
-                                <p>Advanced</p>
+                                <p data-en="Advanced" data-de="Fortschrittlich">Advanced</p>
                             </div>
                         </article>
                         <article>
@@ -208,7 +222,7 @@
                             class="icon"/>
                             <div>
                                 <h3>CSS</h3>
-                                <p>Advanced</p>
+                                <p data-en="Advanced" data-de="Fortschrittlich">Advanced</p>
                             </div>
                         </article>
                         <article>
@@ -223,8 +237,8 @@
         onclick="location.href='./#projects'"/>
     </section>
     <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
+        <p class="section__text__p1" data-en="Browse My Recent" data-de="Durchsuchen Sie meine neuesten">Browse My Recent</p>
+        <h1 class="title" data-en="Projects" data-de="Projekte">Projects</h1>
         <div class="experience-details-container">
             <div class="about-containers">
             <div class="details-containers color-container">
@@ -294,8 +308,8 @@
         onclick="location.href='./#contact'"/>
     </section>
     <section id="contact">
-        <p class="section__text__p1">Get in touch</p>
-        <h1 class="title">Contact ME</h1>
+        <p class="section__text__p1" data-en="Get in touch" data-de="In Kontakt kommen">Get in touch</p>
+        <h1 class="title" data-en="Contact ME" data-de="Kontaktiere mich">Contact ME</h1>
         <div class="contact-info-upper-container">
             <div class="contact-info-container">
                 <img 
@@ -318,15 +332,16 @@
         <nav>
             <div class="nav-links-container">
                 <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about" data-en="About" data-de="Über mich">About</a></li>
+                    <li><a href="#experience" data-en="Experience" data-de="Erfahrung">Experience</a></li>
+                    <li><a href="#projects" data-en="Projects" data-de="Projekte">Projects</a></li>
+                    <li><a href="#contact" data-en="Contact" data-de="Kontakt">Contact</a></li>
                 </ul>
             </div>
         </nav>
         <p>Copyright &#169; 2023 Niki Raykov. All Rights Reserved.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
